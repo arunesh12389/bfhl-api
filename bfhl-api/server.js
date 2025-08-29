@@ -27,6 +27,15 @@ function alterCapsReverse(str) {
 app.get("/", (req, res) => {
   res.send("Hello, your server is running!");
 });
+
+app.get("/bfhl", (req, res) => {
+  res.status(200).json({
+    operation_code: 1,
+    message: "BFHL API is live. Use POST /bfhl to process data."
+  });
+});
+
+
 app.post("/bfhl", (req, res) => {
   try {
     const { data } = req.body;

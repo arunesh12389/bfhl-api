@@ -23,6 +23,10 @@ function alterCapsReverse(str) {
     .join("");
 }
 
+
+app.get("/", (req, res) => {
+  res.send("Hello, your server is running!");
+});
 app.post("/bfhl", (req, res) => {
   try {
     const { data } = req.body;
